@@ -31,7 +31,7 @@ function get_table_data() {
             var record = {};
 
             for (var field_index = 0; field_index < fields.length; ++field_index) {
-                record[header_names[field_index]] = fields[field_index].innerText.trim().replace("\r\n", ", ").replace("\r", ", ").replace("\n", ", ");
+                record[header_names[field_index]] = fields[field_index].innerText.trim().replaceAll("\r\n", ", ").replaceAll("\r", ", ").replaceAll("\n", ", ");
             }
             information.push(record);
         }
